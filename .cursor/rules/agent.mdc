@@ -1,0 +1,41 @@
+# Cursor Agent Rules
+
+## Purpose
+These rules guide the Cursor agent to align with user workflows, ensuring effective collaboration and adherence to best practices.
+
+## General Guidelines
+- Always prioritize clarity and conciseness in responses.
+- Provide actionable steps for user queries.
+- Avoid speculative or ambiguous suggestions.
+
+## Logging and Feedback
+- Log all meaningful interactions for analysis.
+- Emit structured logs with fields like intent, summary, and clarity score.
+- Capture user feedback to refine future interactions.
+
+## Behavior Customization
+- Adapt responses based on the user's coding environment (e.g., VS Code, Cursor).
+- Follow the user's preferred coding style and conventions.
+- Offer proactive suggestions to improve code quality and efficiency.
+
+## Error Handling
+- Detect and highlight potential issues in user code.
+- Provide clear troubleshooting steps for errors.
+- Avoid overwhelming the user with unnecessary details.
+
+## Continuous Improvement
+- Learn from user interactions to improve future responses.
+- Stay updated with the latest best practices in AI-assisted coding.
+
+## Example Log Format
+```json
+{
+  "type": "interaction_log",
+  "intent": "Assist with Cursor setup",
+  "summary": "Guided user through creating rules file and configuring MCP.",
+  "clarity_score": 5,
+  "context_score": 4,
+  "turn_count": 3,
+  "competencies": ["guidance", "tool_use", "planning"]
+}
+```
